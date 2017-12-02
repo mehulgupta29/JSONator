@@ -25,9 +25,14 @@
   "dependencies": {
     "express": "^4.15.2",
     "lodash": "^4.17.4",
+    "node-sass": "^4.7.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-dropzone": "^4.2.3"
+    "react-dropzone": "^4.2.3",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
@@ -44,6 +49,7 @@
     "style-loader": "^0.16.1",
     "url-loader": "^0.5.8",
     "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.2"
+    "webpack-dev-server": "^2.4.2",
+    "webpack-hot-middleware": "^2.21.0"
   }
 }
