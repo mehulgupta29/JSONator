@@ -16,4 +16,11 @@ npm run build
 npm start
 ```
 
+## Deployment using Heroku cli
 Before you deploy, make sure you generated your bundle through `npm run build`.
+
+Running on production mode:
+```
+npm run build
+git heroku push master
+```
