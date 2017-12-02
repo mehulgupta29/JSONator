@@ -3,18 +3,37 @@ import React, {Component} from 'react'
 // import TodoList from './TodoList'
 import {connect} from 'react-redux'
 import {bindActionCreators} from 'redux'
-import actions from '../redux/actions'
+import actions from '../actions/actions'
 // import UserInfo from './UserInfo'
+import { map } from 'lodash'
 
 import FileLoader from './fileLoader/FileLoader';
 
 
 class App extends Component {
+
+	showFileText() {
+		const {files} = this.props;
+		console.log("show file text", files);
+
+		return map(files, f => <li key={f.id}>{f.text}</li>);
+	}
+
 	render() {
+
+		const {files} = this.props;
+		console.log("Files", this.props.files);
+
 		return (
 			<div>
 				Welcome to JSONator
-				<FileLoader/>
+				<FileLoader {...this.props} actions={this.props.actions}/>
+
+				<div>
+					<ul>
+						{this.showFileText()}
+					</ul>
+				</div>
 				{/*<div>*/}
 					{/*<h1>Todo List</h1>*/}
 					{/*<UserInfo user={this.props.user} actions={this.props.actions}/>*/}
